@@ -41,24 +41,29 @@ CRM. Let's Go: The day starts, and you're
 // // you can get hours, minutes, seconds, and milliseconds as well
 // console.log(srt.lines[0].start.hours);
 
+let subtitlesPlaying = false;
 let sw = new Stopwatch();
 let srt;
 let currentLine = 0;
 
 function PlaySubtitles()
 {
+	subtitlesPlaying = true;
 	srt = new Srt(srtText);
 	currentLine = -1;
 	sw.Start();
 
 	let _animationCallback = function()
 	{
+		if (!subtitlesPlaying)
+			return;
 		let captionElem = document.getElementById("captions");
 		if (currentLine >= srt.lines.length - 1)
 		{
 			if (sw.ElapsedTime() >= srt.lines[srt.lines.length - 1].end.seconds)
 			{
 				captionElem.innerHTML = "";
+				subtitlesPlaying = false;
 				return;
 			}
 		}
@@ -77,6 +82,18 @@ function PlaySubtitles()
 		window.requestAnimationFrame(_animationCallback);
 	}
 	window.requestAnimationFrame(_animationCallback);
+}
+
+function StopSubtitles()
+{
+	subtitlesPlaying = true;
+}
+
+function TapTest()
+{
+	StopSubtitles();
+	let captionElem = document.getElementById("captions");
+	captionElem.innerHTML = "Tap Event";
 }
 
 PlaySubtitles();
