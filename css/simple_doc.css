@@ -10,8 +10,8 @@ html, body {
 }
 
 body {
-	background-color: rgb(78, 78, 78);
-	color: rgb(220, 220, 220);
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(255, 255, 255);
 /*	font-family: 'Fauna One', serif;*/
 /*	font-family: 'Roboto', sans-serif;*/
 /*	font-family: 'Segoe UI', 'Lucida Grande', 'Ubuntu', 'sans-serif';*/
@@ -22,19 +22,36 @@ body {
 		"Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.bigLabel {
-    position: relative;
-	display: inline-block;
-	color: rgb(164, 164, 164);
-	font-size: 2em;
-	font-weight: bold;
+#footer
+{
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
-.error {
-	color: rgb(255, 96, 96);
-	/*font-weight: bold;*/
+.img-button
+{
+	flex-grow: 0;
 }
 
-a {
-	color: rgb(220, 220, 220);
+#captions
+{
+	text-align: center;
+	flex-grow: 10;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#doodle-bug
+{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
 }
