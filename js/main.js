@@ -95,5 +95,3 @@ function TapTest()
 	let captionElem = document.getElementById("captions");
 	captionElem.innerHTML = "Tap Event";
 }
-
-PlaySubtitles();
