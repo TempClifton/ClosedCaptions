@@ -1,4 +1,6 @@
-let srtText = `1
+let srtText = {
+	english:
+`1
 00:00:00,050 --> 00:00:02,910
 <i>[Music]</i>
 
@@ -17,7 +19,50 @@ look like now that you have the HubSpot
 5
 00:00:11,860 --> 00:00:14,160
 CRM. Let's Go: The day starts, and you're
-`;
+`,
+	spanish:
+`1
+00:00:00,050 --> 00:00:02,910
+<i>[Música]</i>
+
+2
+00:00:04,490 --> 00:00:07,529
+Hola, soy Kyle de HubSpot Academy y
+
+3
+00:00:07,529 --> 00:00:09,210
+Te voy a mostrar lo que tu jornada laboral puede
+
+4
+00:00:09,210 --> 00:00:11,860
+parece ahora que tienes HubSpot
+
+5
+00:00:11,860 --> 00:00:14,160
+CRM. Let's Go: comienza el día y estás
+`,
+	french:
+`1
+00:00:00,050 --> 00:00:02,910
+<i>[Musique]</i>
+
+2
+00:00:04,490 --> 00:00:07,529
+Hé, c'est Kyle de HubSpot Academy, et
+
+3
+00:00:07,529 --> 00:00:09,210
+Je vais te montrer ce que ta journée de travail peut
+
+4
+00:00:09,210 --> 00:00:11,860
+ressemble maintenant que vous avez le HubSpot
+
+5
+00:00:11,860 --> 00:00:14,160
+CRM. Allons-y : la journée commence et vous êtes
+`,
+};
 
 // console.log(srtText);
 
@@ -45,11 +90,12 @@ let subtitlesPlaying = false;
 let sw = new Stopwatch();
 let srt;
 let currentLine = 0;
+let language = "english";
 
 function PlaySubtitles()
 {
 	subtitlesPlaying = true;
-	srt = new Srt(srtText);
+	srt = new Srt(srtText[language]);
 	currentLine = -1;
 	sw.Start();
 
@@ -94,4 +140,44 @@ function TapTest()
 	StopSubtitles();
 	let captionElem = document.getElementById("captions");
 	captionElem.innerHTML = "Tap Event";
+}
+
+let muteCount = 0;
+
+function ToggleMute()
+{
+	PlaySubtitles();
+	muteCount++;
+	if (muteCount >= 4)
+		document.getElementById("doodle-bug").style.display = "block";
+}
+
+let captionsShowing = true;
+
+function ToggleSubtitles()
+{
+	if (captionsShowing)
+	{
+		document.getElementById("captions").style.height = "0px";
+		document.getElementById("captions").style.opacity = "0";
+	}
+	else
+	{
+		document.getElementById("captions").style.height = "25px";
+		document.getElementById("captions").style.opacity = "1";
+	}
+	captionsShowing = !captionsShowing;
+}
+
+function ChangeLanguage()
+{
+	language = document.getElementById("language").value;
+	srt = new Srt(srtText[language]);
+	if (subtitlesPlaying)
+	{
+		if (currentLine >= 0 && currentLine < srt.lines.length)
+		{
+			document.getElementById("captions").innerHTML = srt.lines[currentLine].subtitle;
+		}
+	}
 }

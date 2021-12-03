@@ -17,9 +17,17 @@
 <body>
 
 <div id="footer">
-	<div class="img-button"><img src="img/mute.png" height=25px></div>
 	<div id="captions"></div>
-	<div class="img-button"><img src="img/captions.png" height=25px></div>
+	<div id="buttonBar">
+		<div class="img-button"><img src="img/mute.png" height=25px onclick="javascript:ToggleMute();"></div>
+		<div class="img-button"><img src="img/captions.png" height=25px onclick="javascript:ToggleSubtitles();"></div>
+		<div class="spacer"></div>
+		<select name="language" id="language" onchange="javascript:ChangeLanguage()">
+			<option value="english">English</option>
+			<option value="spanish">español</option>
+			<option value="french">français</option>
+		</select>
+	</div>
 </div>
 
 <div id="doodle-bug"><img src="img/DoodleBug.gif" height=200px></div>
