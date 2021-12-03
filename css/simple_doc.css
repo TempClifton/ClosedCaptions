@@ -104,6 +104,11 @@ select
 	right: 0px;
 }
 
+#doodle-bug img
+{
+	transform: scaleX(-1);
+}
+
 #delay
 {
 	font-size: 14px;
