@@ -40,11 +40,44 @@ function PlaySubtitles(inScriptName)
 			case 1:
 				scriptName = "parade";
 				break;
+
+			case 2:
+				scriptName = "pleaseTap";
+				break;
+			case 3:
+				scriptName = "gifts";
+				break;
+			case 4:
+				scriptName = "nothing";
+				break;
+			case 5:
+				scriptName = "humanLove";
+				break;
+			case 6:
+				scriptName = "workshop";
+				break;
+			case 7:
+				scriptName = "fireGift";
+				break;
+			case 8:
+				scriptName = "angryZeus";
+				break;
+			case 9:
+				scriptName = "liver";
+				break;
+			case 10:
+				scriptName = "beFree";
+				break;
+			case 11:
+				scriptName = "happyEnding";
+				break;
+
 			default:
 				scriptName = "shuttle";
 				break;
 		}
 	}
+captionElem.innerHTML = scriptName;
 	srt = new Srt(srtText[scriptName][language]);
 	currentLine = -1;
 	sw.Start();

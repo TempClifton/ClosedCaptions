@@ -394,7 +394,143 @@ le voyage.
 `,
 };
 
+pleaseTap_text = {
+	english:
+`1
+00:00:01,700 --> 00:00:03,099
+Please tap the cylinder
+
+2
+00:00:03,600 --> 00:00:06,799
+to learn about Prometheus, the
+Greek god of fire.
+`,
+};
+
+gifts_text = {
+	english:
+`1
+00:00:01,100 --> 00:00:04,799
+When Zeus distributed gifts
+to all the gods.
+`,
+};
+
+nothing_text = {
+	english:
+`1
+00:00:00,900 --> 00:00:03,999
+But used to care much for
+humans, so he gave them nothing.
+`,
+};
+
+humanLove_text = {
+	english:
+`1
+00:00:01,500 --> 00:00:04,889
+However, the Titan Prometheus
+loved and felt sorry for the
+
+2
+00:00:04,900 --> 00:00:05,599
+humans.
+`,
+};
+
+workshop_text = {
+	english:
+`1
+00:00:00,700 --> 00:00:04,689
+So Prometheus climbed up onto
+Mount Olympus and stole fire
+
+2
+00:00:04,700 --> 00:00:07,199
+from the Smith God's Workshop.
+`,
+};
+
+fireGift_text = {
+	english:
+`1
+00:00:01,300 --> 00:00:04,689
+Prometheus then put the fire
+into a hollow Reed and gifted
+
+2
+00:00:04,700 --> 00:00:06,099
+it to the humans.
+`,
+};
+
+angryZeus_text = {
+	english:
+`1
+00:00:00,900 --> 00:00:04,499
+As you can imagine, Zeus was
+Furious when he heard about this.
+`,
+};
+
+liver_text = {
+	english:
+`1
+00:00:01,500 --> 00:00:04,189
+Zeus team took Prometheus to a
+high mountain and chained him
+
+2
+00:00:04,200 --> 00:00:07,889
+on a rock, and every day Zeus
+to it's an eagle that ate the
+
+3
+00:00:07,900 --> 00:00:09,299
+liver of Prometheus.
+`,
+};
+
+beFree_text = {
+	english:
+`1
+00:00:01,200 --> 00:00:04,589
+For 30 years, The Immortal
+Prometheus remained Bound in
+
+2
+00:00:04,600 --> 00:00:07,699
+Chains until Hercules Zeus has
+own.
+
+3
+00:00:07,700 --> 00:00:11,099
+Demigod son released him
+freedom from his torment.
+`,
+};
+
+happyEnding_text = {
+	english:
+`1
+00:00:01,400 --> 00:00:03,599
+And they lived happily ever
+after.
+`,
+};
+
 let srtText = {
 	shuttle:shuttle_text,
 	parade:parade_text,
+
+	pleaseTap:pleaseTap_text,
+	gifts:gifts_text,
+	nothing:nothing_text,
+	humanLove:humanLove_text,
+	workshop:workshop_text,
+	fireGift:fireGift_text,
+	angryZeus:angryZeus_text,
+	liver:liver_text,
+	beFree:beFree_text,
+	happyEnding:happyEnding_text,
 };
