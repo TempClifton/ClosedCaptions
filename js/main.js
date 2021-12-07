@@ -77,7 +77,6 @@ function PlaySubtitles(inScriptName)
 				break;
 		}
 	}
-// document.getElementById("captions").innerHTML = "** " + inScriptName + " **";
 	srt = new Srt(srtText[scriptName][language]);
 	currentLine = -1;
 	sw.Start();
