@@ -1,69 +1,3 @@
-let srtText = {
-	english:
-`1
-00:00:00,050 --> 00:00:02,910
-<i>[Music]</i>
-
-2
-00:00:04,490 --> 00:00:07,529
-Hey it's Kyle from HubSpot Academy, and
-
-3
-00:00:07,529 --> 00:00:09,210
-I'm gonna show you what your workday can
-
-4
-00:00:09,210 --> 00:00:11,860
-look like now that you have the HubSpot
-
-5
-00:00:11,860 --> 00:00:14,160
-CRM. Let's Go: The day starts, and you're
-`,
-	spanish:
-`1
-00:00:00,050 --> 00:00:02,910
-<i>[Música]</i>
-
-2
-00:00:04,490 --> 00:00:07,529
-Hola, soy Kyle de HubSpot Academy y
-
-3
-00:00:07,529 --> 00:00:09,210
-Te voy a mostrar lo que tu jornada laboral puede
-
-4
-00:00:09,210 --> 00:00:11,860
-parece ahora que tienes HubSpot
-
-5
-00:00:11,860 --> 00:00:14,160
-CRM. Let's Go: comienza el día y estás
-`,
-	french:
-`1
-00:00:00,050 --> 00:00:02,910
-<i>[Musique]</i>
-
-2
-00:00:04,490 --> 00:00:07,529
-Hé, c'est Kyle de HubSpot Academy, et
-
-3
-00:00:07,529 --> 00:00:09,210
-Je vais te montrer ce que ta journée de travail peut
-
-4
-00:00:09,210 --> 00:00:11,860
-ressemble maintenant que vous avez le HubSpot
-
-5
-00:00:11,860 --> 00:00:14,160
-CRM. Allons-y : la journée commence et vous êtes
-`,
-};
-
 // console.log(srtText);
 
 // let srt = new Srt(srtText);
@@ -90,12 +24,28 @@ let subtitlesPlaying = false;
 let sw = new Stopwatch();
 let srt;
 let currentLine = 0;
+let scriptName = "shuttle";
 let language = "english";
 
-function PlaySubtitles()
+function PlaySubtitles(inScriptName)
 {
 	subtitlesPlaying = true;
-	srt = new Srt(srtText[language]);
+	if (inScriptName)
+		scriptName = inScriptName;
+	else
+	{
+		scriptName = "shuttle";
+		switch (muteCount)
+		{
+			case 1:
+				scriptName = "parade";
+				break;
+			default:
+				scriptName = "shuttle";
+				break;
+		}
+	}
+	srt = new Srt(srtText[scriptName][language]);
 	currentLine = -1;
 	sw.Start();
 
@@ -172,7 +122,7 @@ function ToggleSubtitles()
 function ChangeLanguage()
 {
 	language = document.getElementById("language").value;
-	srt = new Srt(srtText[language]);
+	srt = new Srt(srtText[scriptName][language]);
 	if (subtitlesPlaying)
 	{
 		if (currentLine >= 0 && currentLine < srt.lines.length)
