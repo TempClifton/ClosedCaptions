@@ -42,33 +42,37 @@ function PlaySubtitles(inScriptName)
 				break;
 
 			case 2:
+				scriptName = "promAll";
+				break;
+
+			case 3:
 				scriptName = "pleaseTap";
 				break;
-			case 3:
+			case 4:
 				scriptName = "gifts";
 				break;
-			case 4:
+			case 5:
 				scriptName = "nothing";
 				break;
-			case 5:
+			case 6:
 				scriptName = "humanLove";
 				break;
-			case 6:
+			case 7:
 				scriptName = "workshop";
 				break;
-			case 7:
+			case 8:
 				scriptName = "fireGift";
 				break;
-			case 8:
+			case 9:
 				scriptName = "angryZeus";
 				break;
-			case 9:
+			case 10:
 				scriptName = "liver";
 				break;
-			case 10:
+			case 11:
 				scriptName = "beFree";
 				break;
-			case 11:
+			case 12:
 				scriptName = "happyEnding";
 				break;
 

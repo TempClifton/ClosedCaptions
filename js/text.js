@@ -519,10 +519,106 @@ after.
 `,
 };
 
+promAll_text = {
+	english:
+`1
+00:00:03,800 --> 00:00:07,799
+One day Zeus distributed gifts
+to all the gods,
+
+2
+00:00:11,000 --> 00:00:14,089
+but Zeus he didn't care much
+for humans, so he gave them
+
+3
+00:00:14,100 --> 00:00:15,399
+nothing.
+
+4
+00:00:16,900 --> 00:00:20,589
+However, the Titan Prometheus
+loved and felt sorry for the
+
+5
+00:00:20,600 --> 00:00:21,399
+humans,
+
+6
+00:00:24,000 --> 00:00:27,688
+so Prometheus climbed up onto
+Mount Everest and stole fire
+
+7
+00:00:27,700 --> 00:00:30,299
+from the Smith God's Workshop
+
+8
+00:00:33,400 --> 00:00:37,589
+Prometheus, then put the fire
+into a hollow Reed and gifted
+
+9
+00:00:37,600 --> 00:00:39,199
+it to the humans.
+
+10
+00:00:42,500 --> 00:00:46,199
+As you can imagine, zoos was
+Furious.
+
+11
+00:00:46,200 --> 00:00:47,399
+When you heard about this,
+
+12
+00:00:48,700 --> 00:00:51,689
+he took Prometheus to a high
+mountain in chained him to a
+
+13
+00:00:51,700 --> 00:00:55,189
+rock, and every day Zeus would
+send an eagle that would go and
+
+14
+00:00:55,200 --> 00:00:56,799
+eat prometheus's liver
+
+15
+00:00:59,300 --> 00:01:00,399
+for 30 years.
+
+16
+00:01:00,400 --> 00:01:03,399
+The Immortal Prometheus remain
+Bound in Chains
+
+17
+00:01:05,000 --> 00:01:05,599
+until
+
+18
+00:01:06,600 --> 00:01:08,199
+Hercules Zeus has own.
+
+19
+00:01:08,200 --> 00:01:11,799
+Demigod son released him
+freeing him from his torment,
+
+20
+00:01:13,200 --> 00:01:15,699
+and they all lived happily ever
+after.
+`,
+};
+
 let srtText = {
 	shuttle:shuttle_text,
 	parade:parade_text,
 
+	promAll:promAll_text,
 	pleaseTap:pleaseTap_text,
 	gifts:gifts_text,
 	nothing:nothing_text,
